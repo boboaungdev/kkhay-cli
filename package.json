@@ -1,9 +1,9 @@
 {
   "name": "kkhay-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official CLI for K Khay Sovereign Crypto Payment Gateway",
   "bin": {
-    "kkhay": "./bin/kkhay.js"
+    "kkhay": "bin/kkhay.js"
   },
   "type": "module",
   "main": "./dist/index.js",
@@ -32,7 +32,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/boboaungdev/kkhay-cli.git"
+    "url": "git+https://github.com/boboaungdev/kkhay-cli.git"
   },
   "dependencies": {
     "commander": "^12.1.0",
@@ -46,4 +46,3 @@
     "typescript": "^5.7.2"
   }
 }
-
