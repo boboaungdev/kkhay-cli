@@ -1,6 +1,6 @@
 {
   "name": "kkhay-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Official CLI for K Khay Sovereign Crypto Payment Gateway",
   "bin": {
     "kkhay": "./bin/kkhay.js"
