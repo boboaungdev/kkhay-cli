@@ -1,12 +1,13 @@
 {
   "name": "kkhay-cli",
-  "version": "1.0.2",
-  "description": "Official CLI for K Khay Sovereign Crypto Payment Gateway",
+  "version": "1.0.4",
+  "description": "Official CLI for K Khay — The Non-Custodial Crypto Payment Gateway (190+ Networks, 500+ Currencies).",
   "bin": {
     "kkhay": "bin/kkhay.js"
   },
   "type": "module",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "bin",
@@ -26,13 +27,29 @@
     "payments",
     "gateway",
     "webhook",
-    "terminal"
+    "terminal",
+    "non-custodial",
+    "web3",
+    "multi-chain",
+    "bitcoin",
+    "solana",
+    "ton",
+    "tron",
+    "ethereum",
+    "bsc"
   ],
   "author": "K Khay <dev@kkhay.com>",
   "license": "MIT",
+  "homepage": "https://gateway.kkhay.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/boboaungdev/kkhay-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/boboaungdev/kkhay-cli/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "commander": "^12.1.0",

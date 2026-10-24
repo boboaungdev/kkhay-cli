@@ -1,12 +1,7 @@
 import fs from "node:fs"
 import path from "node:path"
 import os from "node:os"
-
-export interface KkhayConfig {
-  apiKey?: string
-  baseUrl?: string
-  ipnSecret?: string
-}
+import type { KkhayConfig } from "./types"
 
 const CONFIG_DIR = path.join(os.homedir(), ".kkhay")
 const CONFIG_FILE = path.join(CONFIG_DIR, "config.json")
@@ -15,9 +10,12 @@ export function loadConfig(): KkhayConfig {
   try {
     if (fs.existsSync(CONFIG_FILE)) {
       const content = fs.readFileSync(CONFIG_FILE, "utf-8")
-      return JSON.parse(content)
+      return JSON.parse(content) as KkhayConfig
     }
-  } catch {}
+  } catch {
+    // Ignore corrupt or unreadable local config
+  }
+
   return {
     apiKey: process.env.KKHAY_API_KEY,
     baseUrl: process.env.KKHAY_BASE_URL || "https://api.kkhay.com",
@@ -37,3 +35,4 @@ export function saveConfig(updates: Partial<KkhayConfig>): KkhayConfig {
   return updated
 }
 
+export { KkhayConfig }

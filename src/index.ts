@@ -10,10 +10,10 @@ const program = new Command()
 program
   .name("kkhay")
   .description(
-    pc.bold("K Khay Sovereign Crypto Payment Gateway CLI") +
-      "\nInteract with invoices, test IPN webhooks, and manage merchant configurations from the terminal."
+    pc.bold("K Khay Non-Custodial Crypto Payment Gateway CLI") +
+      "\nAccept 500+ cryptocurrencies across 190+ blockchain networks with zero custody.\nManage invoices, test IPN webhooks, and inspect configurations directly from your terminal."
   )
-  .version("1.0.0")
+  .version("1.0.4")
 
 registerConfigCommand(program)
 registerInvoiceCommand(program)
@@ -21,4 +21,3 @@ registerTriggerCommand(program)
 registerStatusCommand(program)
 
 program.parse(process.argv)
-
